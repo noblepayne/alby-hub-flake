@@ -24,7 +24,7 @@ buildGoModule {
       # add frontend drv output to src
       cp -r ${albyHubUI}/dist $out/frontend/dist
     '';
-  vendorHash = "sha256-zztq5V+Ax7BQQL6NGKOR2cDYT+C27Zokty3CMEhIdUo=";
+  vendorHash = "sha256-VpybX0AsVn2EMIvRjPaKIU+ZvmnhA9byav0o09YVlqc=";
   proxyVendor = true;
   nativeBuildInputs = [autoPatchelfHook];
   ldFlags = ["-X 'github.com/getAlby/hub/version.Tag=${version}'"];
