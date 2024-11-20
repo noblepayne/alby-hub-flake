@@ -22,7 +22,7 @@
 }: let
   offlineCache = fetchYarnDeps {
     yarnLock = "${albyHubSrc}/frontend/yarn.lock";
-    hash = "sha256-Fvrg3CwouVJ4Dm/WAztptwXOY7fU+gYSAXdLT7srmyY=";
+    hash = "sha256-3hJyM6V6828RCUEqwUHeX3fy6LKgspyG4Q0fgxCF+V4=";
   };
   deps = stdenv.mkDerivation {
     pname = "alby-hub-deps";
@@ -47,7 +47,7 @@
     '';
     outputHashMode = "recursive";
     outputHashAlgo = "sha256";
-    outputHash = "sha256-KgZOuNPKKI7d7pGBcWcuFg/UYaEh7EYfKqZC0ZFTJ8Q=";
+    outputHash = "sha256-9PdJArU8ovYPmFMpVU9MVdlD4o8kDwjWAw0rPcCMhkQ=";
     dontFixup = true;
   };
 in
