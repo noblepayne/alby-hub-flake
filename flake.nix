@@ -1,5 +1,5 @@
 {
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
   outputs = {
     self,
     nixpkgs,
@@ -8,7 +8,7 @@
     supportedSystems = ["x86_64-linux" "aarch64-linux"];
     pkgsBySystem = nixpkgs.lib.getAttrs supportedSystems nixpkgs.legacyPackages;
     forAllPkgs = fn: nixpkgs.lib.mapAttrs (system: pkgs: (fn pkgs)) pkgsBySystem;
-    version = "1.10.4";
+    version = "1.12.0";
   in {
     formatter = forAllPkgs (pkgs: pkgs.alejandra);
     packages = forAllPkgs (pkgs: {
@@ -16,7 +16,7 @@
         owner = "getAlby";
         repo = "hub";
         rev = "v${version}";
-        hash = "sha256-FIgWwQ6K7zJNUhVWW75oYZjvnOMOwgLCxhFYeJWHAM4=";
+        hash = "sha256-m3ImIz9qQVFZAjZPuVFkGANhWFIJp0uGDknfhouHHBo=";
       };
       albyHubUI = pkgs.callPackage ./frontend.nix {
         inherit version;

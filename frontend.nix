@@ -10,7 +10,7 @@
 }: let
   offlineCache = fetchYarnDeps {
     yarnLock = "${albyHubSrc}/frontend/yarn.lock";
-    hash = "sha256-3hJyM6V6828RCUEqwUHeX3fy6LKgspyG4Q0fgxCF+V4=";
+    hash = "sha256-QFhIpJkd426c3GaDSpI36CxlNGVKQoSN8wDgAVh9Ee4=";
   };
 in
   stdenv.mkDerivation {
