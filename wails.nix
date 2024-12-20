@@ -16,13 +16,13 @@
   stdenv,
   version,
   wails,
-  webkitgtk,
+  webkitgtk_4_1,
   yarn,
   ...
 }: let
   offlineCache = fetchYarnDeps {
     yarnLock = "${albyHubSrc}/frontend/yarn.lock";
-    hash = "sha256-3hJyM6V6828RCUEqwUHeX3fy6LKgspyG4Q0fgxCF+V4=";
+    hash = "sha256-QFhIpJkd426c3GaDSpI36CxlNGVKQoSN8wDgAVh9Ee4=";
   };
   deps = stdenv.mkDerivation {
     pname = "alby-hub-deps";
@@ -47,7 +47,7 @@
     '';
     outputHashMode = "recursive";
     outputHashAlgo = "sha256";
-    outputHash = "sha256-9PdJArU8ovYPmFMpVU9MVdlD4o8kDwjWAw0rPcCMhkQ=";
+    outputHash = "sha256-/fOx3i+kb8reloVF3ZfHoKRiochKg4jIBbe7MYDOr00=";
     dontFixup = true;
   };
 in
@@ -75,7 +75,7 @@ in
       stdenv.cc
       stdenv.cc.cc.lib
       gtk3
-      webkitgtk
+      webkitgtk_4_1
     ];
     buildPhase = ''
       export HOME=$(mktemp -d)
